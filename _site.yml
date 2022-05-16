@@ -1,0 +1,27 @@
+name: "Text Analyis & Bash"
+output_dir: "docs"
+navbar:
+  title: "Text Analyis & Bash"
+  left:
+    - text: "Introduction"
+      href: 1_introduction.html
+    - text: "Text Analysis Techniques"
+      href: 2_techniques.html
+    - text: "Natural Language Processing"
+      href: 3_nlp.html
+    - text: 'Abstraction'
+      href: 4_abstraction.html
+    - text: 'Hands on with Bash'
+      href: 5_hands-on-with-bash.html
+output:
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    css: styles.css
+    toc: true
+    toc_depth: 2
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    includes:
+      after_body: footer.html

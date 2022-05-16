@@ -1,0 +1,43 @@
+---
+title: "Text Analyis & Bash"
+pagetitle: "Text Analysis & Bash"
+---
+
+```{r echo=FALSE}
+knitr::read_chunk("./scripts/workshop_files.R")
+```
+
+## Description
+
+This workshop will briefly introduce:
+
+* core concepts in text analysis.
+* basic computational approaches to text analysis.
+* command line tools for basic text analysis.
+
+## Objectives
+
+* Introduce core techniques used in text analysis.
+* Review the automated vs computer assisted approaches to text analysis.
+* Introduce Linux command line tools for text analysis.
+
+## Outcomes
+
+* Know what questions to ask when tackling a text analysis question.
+* Describe core concepts used in text analysis.
+* Run basic text queries on a document using Linux command line tools.
+
+## What you will need
+
+* A computer. Neither a tablet nor cell phone will suffice.
+
+## Pre-load
+
+* Set up a terminal
+     - Mac and Linux: bash or zsh terminal apps are already installed, simply go to your app library.
+     - Windows: install Git, which will include the Git Bash utility. From the start menu, type `bash` to launch the application.
+
+## Files
+
+```{r loadfiles, results='asis', echo=FALSE}
+```
