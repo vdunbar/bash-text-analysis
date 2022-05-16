@@ -35,7 +35,7 @@ This workshop will briefly introduce:
 
 * Set up a terminal
      - Mac and Linux: bash or zsh terminal apps are already installed, simply go to your app library.
-     - Windows: install Git, which will include the Git Bash utility. From the start menu, type `bash` to launch the application.
+     - Windows: [install Git](https://git-scm.com/download/win), which will include the Git Bash utility. From the start menu, type `bash` to launch the application.
 
 ## Files
 
