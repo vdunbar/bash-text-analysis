@@ -44,6 +44,100 @@
     </style>
 
 
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
 
 
 
@@ -344,7 +438,117 @@ div.tocify {
 </div>
 
 
-
+<p>The following is heavily based on the tutorial authored by William J Turkel, Professor of History at The University of Western Ontario, and available at <a href="https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/">https://williamjturkel.net/2013/06/15/basic-text-analysis-with-command-line-tools-in-linux/</a></p>
+<div id="set-up" class="section level2">
+<h2>Set up</h2>
+<p>First things first, we need to launch our terminal app–on a Mac simply navigate to your applications launch Terminal, on a PC start to type <code>bash</code> into the start menu text prompt and you should see your Git Bash application pop up.</p>
+<p>Second we’ll get ourselves set up with a place to work. For this we’ll revisit the <code>cd</code>–change directory–and <code>mkdir</code>–makedirectory–command line tools to create a directory called <code>Silver-Fleece</code> on our desktop and place ourselves in that folder.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Desktop</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> Silver-Fleece</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Silver-Fleece</span></code></pre></div>
+</div>
+<div id="getting-content" class="section level2">
+<h2>Getting content</h2>
+<p>We need to get some textual content to work with. For this exercise, we’ll download a plain text copy W. E. B. Du Bois’ <em>The Quest of the Silver Fleece</em>, from Project Gutenberg using <code>curl</code>, adn then <code>ls</code> to confirm it’s in our folder.</p>
+<p>The url for the plain text version is <code>https://www.gutenberg.org/cache/epub/15265/pg15265.txt</code></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> https://www.gutenberg.org/cache/epub/15265/pg15265.txt <span class="at">-o</span> silver-fleece.txt</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+</div>
+<div id="first-look" class="section level2">
+<h2>First look</h2>
+<p>Having learned a little bit about file encodings, plain text, and some of the nuances in how things like end of lines are handled, the first view of our text we’ll want is to know something about its encoding. We can do this with <code>file</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> silver-fleece.txt</span></code></pre></div>
+<p>This tells us that our file is UTF-8 encoded, which is good, and that line endings use a carriage return <em>and</em> line feed; this latter piece suggests to us that this file was generated on a Windows PC as Linux and Mac OS expect only a line feed when denoting the end of a line. When moving text files across operating systems, this is an importnat thing to note. We’ll look at how we can replace <code>crlf</code> line endings with just <code>lf</code>.</p>
+<p>As we did in the first workshop, we’ll start by just looking at the head and tail of the file…</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> silver-fleece.txt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> silver-fleece.txt</span></code></pre></div>
+</div>
+<div id="initial-clean-up" class="section level2">
+<h2>Initial clean up</h2>
+<p>As is common in text files, there will be content that we don’t want to analyze–in this case, the book contains header and footer information about Project Gutenberg, information that we should strip from the file. We’ll use the <code>less</code> command to paginate through the content to figure out where the header and footer begin and end–the <code>-N</code> flag will also give us the line numbers.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> <span class="at">-N</span> silver-fleece.txt</span></code></pre></div>
+<p>What we see is that the header content runs to line 19 inclusive–line 23 inclusive if we don’t want blank lines, and that book ends with line 14523, so we want to strip out lines 14524 through to the end of the book which is at line 14891. To do this, we’re going to use <code>sed</code>–the stream editor. <code>sed</code> is very powerful command line tool for manipulating plain text files.</p>
+<p>Before we start making changes to our data set though, we should back it up. Remember, file extensions are simply part of the file name, and when managing plain text files, we can use the extensions to signify the role of particular file.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> silver-fleece.txt silver-fleece.bkp</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<p>First we remove the footer…</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="st">&#39;14524,14891d&#39;</span> silver-fleece.txt <span class="op">&gt;</span> silver-fleece-no-footer.txt</span></code></pre></div>
+<p>We’re seeing a couple of new things here. First we should note that <code>sed</code> is being given an argument in the format of two line numbers seperated by a comma followed by a <code>d</code> for delete. It is then being directed to a file to which to apply this argument. Finally, the greater than character <code>&gt;</code> directs the output to another file. By default <code>sed</code> directs output to your console; it doesn’t actually overwrite the file we’re working with. It is possible to direct <code>sed</code> to overwrite the file, but there are many reasons why we might want to store each of our changes in a new file, for example for error detection and resolution.</p>
+<p>To remove the header, we’ll similarly apply the following</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="st">&#39;1,23d&#39;</span> silver-fleece-no-footer.txt <span class="op">&gt;</span> silver-fleece-trimmed.txt</span></code></pre></div>
+<p>Now, how do we know we’ve been successful? To view the results, we can use <code>head</code> and <code>tail</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> silver-fleece-trimmed.txt</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> silver-fleece-trimmed.txt</span></code></pre></div>
+</div>
+<div id="basic-stats" class="section level2">
+<h2>Basic stats</h2>
+<p>We can also compare line, word, and byte counts with <code>wc</code>–word count. We’ll use truncation to get a report on all of the files we’ve created so far.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> silver<span class="pp">*</span></span></code></pre></div>
+<p>We can also get just the line and word counts with the flags <code>-l</code> and <code>-w</code>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> silver<span class="pp">*</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-w</span> silver<span class="pp">*</span></span></code></pre></div>
+</div>
+<div id="looking-for-words" class="section level2">
+<h2>Looking for words</h2>
+<p>We’ll start with something that resembles collocation or concordance. But this requires an introduction to <code>grep</code>–g = global, re = regular expression, p = print. And likely really most importantly, the <code>re</code> section of <code>grep</code>. <code>grep</code> looks through files, finds all instances of a regular expression, and prints the results.</p>
+<p>Regular expressions are simply sequences of characters to match. These characters may be metacharacters or literal characters. For example, <code>grep b somefile.txt</code> would look for the letter <code>b</code> as a stand-alone character in <code>somefile.txt</code>, where as <code>grep b. somefile.txt</code> would search for the letter <code>b</code> followed by any characters, as <code>.</code> is a metacharacter that matches any character other than a newline. This kind of general operator is something we’re fairly used to. Regular expressions also allow us to mix and match metacharacters and literal characters. For example <code>[a-z]</code> matches all lower case letters from a - z.</p>
+<p>Let’s start with something simple though, and only look for literal characters. We’ll start by looking for the word <code>cotton</code>, using the flag <code>-n</code> so that we also get the line number in the printed output.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-n</span> <span class="st">&#39;cotton&#39;</span> silver-fleece-trimmed.txt</span></code></pre></div>
+<p>To make this easier to read, we’ll run the same command, but with the addition of the <code>-color</code> flag.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-n</span> <span class="at">--color</span> <span class="st">&#39;cotton&#39;</span> silver-fleece-trimmed.txt</span></code></pre></div>
+<p>Much like Markdown requires an application to process the content to translate the structure into a visual representation of that structure that we read, a regular expression–or regex–processor translates the regular expression syntax into a representation that can be executed on a file–<code>grep</code> is one such processor. And just like with Markdown, where there are multiple falvours that support extended syntaxes, there are regex processors that support extended implementations. So while the basics are fairly standard, the actual implementation might differ from application to application.</p>
+<p>I bring this up because <code>grep</code> is case sensitive. We can see this by replacing <code>cotton</code> with <code>Cotton</code>.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-n</span> <span class="at">--color</span> <span class="st">&#39;Cotton&#39;</span> silver-fleece-trimmed.txt</span></code></pre></div>
+<p><code>egrep</code> is an alternative regex processor–the <code>e</code> standing for <code>extended</code>. <code>egrep</code> supports some additional arguments, for example allowing us to <code>OR</code> literal characters with the use of parentheses–<code>()--and pipes--</code>|`. So the following will be case insensitive.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">egrep</span> <span class="at">-n</span> <span class="at">--color</span> <span class="st">&#39;(C|c)otton&#39;</span> silver-fleece-trimmed.txt</span></code></pre></div>
+</div>
+<div id="more-data-preparation" class="section level2">
+<h2>More data preparation</h2>
+<p>From the above, we might imagine that it would be useful to clean our data set a little more before analyzing it. It is not uncommon in text analysis to do things like converting all text to lower case and removing punctuation, excess white space etc… In fact, for things like word frequencies etc, a non-case sensitive data set will be more robust. So, we’ll start by removing all punctuation and converting all uppercase characters to lower case characters. Luckily, to aid in this, there a regex patterns that make this relatively easy.</p>
+<p>While <code>grep</code> is a convenient tool for printing our query to the screen, <code>grep</code> does not actually alter the underlying data. There are several command line tools that we could use to achieve this–including <code>sed</code> which we’ve already seen–but for these next couple of tasks, we’ll use <code>tr</code>–translate characters–as it’s slightly simpler to use. <code>tr</code> also works a little differently than the other command line tools we’ve seen so far in terms of how we feed it arguments and direct those arguments to files. We’ll be using both the lesser than–<code>&lt;</code>–and greater than–<code>&gt;</code> symbols to indicate the input file and then the output file to apply our arguments to.</p>
+<p>First, we remove the punctuation, using the <code>-d</code> flag for delete, and the <code>[:punct:]</code> regular expression to represent all punctuation</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tr</span> <span class="at">-d</span> [:punct:] <span class="op">&lt;</span> silver-fleece-trimmed.txt <span class="op">&gt;</span> silver-fleece-nopunct.txt</span></code></pre></div>
+<p>While this approach is simple, it is flawed. For now, we won’t concern ourselves with rectifying this flaw, but we should see what’s happened</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">egrep</span> <span class="at">-n</span> <span class="at">--color</span> <span class="st">&#39;(C|c)otton&#39;</span> silver-fleece-nopunct.txt</span></code></pre></div>
+<p>Next, we’ll replace all upper case characters with lower case characters, giving <code>tr</code> two regex strings to match and swap using <code>[:upper:]</code> and <code>[:lower:]</code>.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tr</span> [:upper:] [:lower:] <span class="op">&lt;</span> silver-fleece-nopunct.txt <span class="op">&gt;</span> silver-fleece-lowercase.txt</span></code></pre></div>
+<p>At this stage, we’ve seen collocation and concordance in a simple form. With our data a little cleaner now, we can start to address frequencies, extraction and classification.</p>
+</div>
+<div id="classification" class="section level2">
+<h2>Classification</h2>
+<p>At it’s simplest, classification might be seen as lumping synonymous terms together.</p>
+</div>
+<div id="frequency-extraction" class="section level2">
+<h2>Frequency &amp; Extraction</h2>
+<p>Frequency and extraction begin with getting our data into something that resembles tabular format, in this case, a single column with one word per row, as we saw with the Emily Dickinson poem. To do this, we need to replace all spaces in our text with a newline character. Now, we’ll recall that currently newlines in this file are encoded as <code>crlf</code></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> silver-fleece-lowercase.txt</span></code></pre></div>
+<p>A <code>cr</code> is encoded in the file as the non printed <code>\r</code>, and the <code>lf</code> as the non printed <code>\n</code>. Since we’re working in Linux or Unix environments, we’ll start by standardizing this by deleting all instances of the <code>\r</code> character</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tr</span> <span class="at">-d</span> <span class="st">&#39;\r&#39;</span> <span class="op">&lt;</span> silver-fleece-lowercase.txt  <span class="op">&gt;</span> silver-fleece-lowercase-lf.txt</span></code></pre></div>
+<p>We can always verify this</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">file</span> silver-fleece-lowercase-lf.txt</span></code></pre></div>
+<p>and then we’ll replace all spaces between our words with the non printed <code>\n</code> character</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tr</span> <span class="st">&#39; &#39;</span> <span class="st">&#39;\n&#39;</span> <span class="op">&lt;</span> silver-fleece-lowercase-lf.txt <span class="op">&gt;</span> silver-fleece-oneword.txt</span></code></pre></div>
+<p>Again, we can see what we’ve done with <code>head</code></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> silver-fleece-oneword.txt</span></code></pre></div>
+<p>Now that things are organized this way, we can identify unique instances and sort things. First, we sort</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span> silver-fleece-oneword.txt <span class="op">&gt;</span> silver-fleece-sorted.txt</span></code></pre></div>
+<p>And then we do a word frequency analysis</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">uniq</span> <span class="at">-c</span> silver-fleece-sorted.txt <span class="op">&gt;</span> silver-fleece-unique.txt</span></code></pre></div>
+<p>And we can use less to view our content</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> silver-fleece-unique.txt </span></code></pre></div>
+</div>
+<div id="pipes" class="section level2">
+<h2>Pipes</h2>
+<p>One thing that Bash lets us do is to pass the output from one command to another. We do this with a pipe–<code>|</code>–character. So instead of saving our <code>uniq</code> output to a file and then reading it back in again with <code>less</code> we can save a few steps by piping the results of our call to <code>uniq</code> dircetly to <code>less</code>–better yet, we can first pipe it back to <code>sort</code> with the <code>-r</code> flag to reverse the oder to see the most frequent words before piping it to less.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">uniq</span> <span class="at">-c</span> silver-fleece-sorted.txt <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-r</span> <span class="kw">|</span> <span class="fu">less</span></span></code></pre></div>
+</div>
 
 <div id="footer">
     <hr />
