@@ -9,10 +9,12 @@ navbar:
       href: 2_techniques.html
     - text: "Natural Language Processing"
       href: 3_nlp.html
+    - text: "Medline"
+      href: 4_medline.html
     - text: 'Abstraction'
-      href: 4_abstraction.html
+      href: 5_abstraction.html
     - text: 'Hands on with Bash'
-      href: 5_hands-on-with-bash.html
+      href: 6_hands-on-with-bash.html
 output:
   html_document:
     theme: flatly

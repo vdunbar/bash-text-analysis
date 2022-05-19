@@ -10,7 +10,7 @@ First things first, we need to launch our terminal app--on a Mac simply navigate
 
 Second we'll get ourselves set up with a place to work. For this we'll revisit the `cd`--change directory--and `mkdir`--makedirectory--command line tools to create a directory called `Silver-Fleece` on our desktop and place ourselves in that folder.
 
-```bash
+```{r, engine = 'bash', count_lines}
 cd ~/Desktop
 
 mkdir Silver-Fleece

@@ -20,6 +20,10 @@
   background: #FAFAFA;
 }
 
+.citation {
+  font-size: 75%;
+}
+
 #footer {
   margin-top: 50px;
 }

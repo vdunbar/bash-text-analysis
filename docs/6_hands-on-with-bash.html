@@ -334,10 +334,13 @@ div.tocify {
   <a href="3_nlp.html">Natural Language Processing</a>
 </li>
 <li>
-  <a href="4_abstraction.html">Abstraction</a>
+  <a href="4_medline.html">Medline</a>
 </li>
 <li>
-  <a href="5_hands-on-with-bash.html">Hands on with Bash</a>
+  <a href="5_abstraction.html">Abstraction</a>
+</li>
+<li>
+  <a href="6_hands-on-with-bash.html">Hands on with Bash</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -361,18 +364,18 @@ div.tocify {
 <h2>Set up</h2>
 <p>First things first, we need to launch our terminal app–on a Mac simply navigate to your applications launch Terminal, on a PC start to type <code>bash</code> into the start menu text prompt and you should see your Git Bash application pop up.</p>
 <p>Second we’ll get ourselves set up with a place to work. For this we’ll revisit the <code>cd</code>–change directory–and <code>mkdir</code>–makedirectory–command line tools to create a directory called <code>Silver-Fleece</code> on our desktop and place ourselves in that folder.</p>
-<pre class="bash"><code>cd ~/Desktop
+<p>```{r, engine = ‘bash’, count_lines} cd ~/Desktop</p>
+<p>mkdir Silver-Fleece</p>
+<p>cd Silver-Fleece</p>
+<pre><code>
+## Getting content
 
-mkdir Silver-Fleece
+We need to get some textual content to work with. For this exercise, we&#39;ll download a plain text copy W. E. B. Du Bois&#39; *The Quest of the Silver Fleece*, from Project Gutenberg using `curl`, adn then `ls` to confirm it&#39;s in our folder.
 
-cd Silver-Fleece</code></pre>
-<pre><code>## mkdir: Silver-Fleece: File exists</code></pre>
-</div>
-<div id="getting-content" class="section level2">
-<h2>Getting content</h2>
-<p>We need to get some textual content to work with. For this exercise, we’ll download a plain text copy W. E. B. Du Bois’ <em>The Quest of the Silver Fleece</em>, from Project Gutenberg using <code>curl</code>, adn then <code>ls</code> to confirm it’s in our folder.</p>
-<p>The url for the plain text version is <code>https://www.gutenberg.org/cache/epub/15265/pg15265.txt</code></p>
-<pre class="bash"><code>curl https://www.gutenberg.org/cache/epub/15265/pg15265.txt -o silver-fleece.txt
+The url for the plain text version is `https://www.gutenberg.org/cache/epub/15265/pg15265.txt`
+
+```bash
+curl https://www.gutenberg.org/cache/epub/15265/pg15265.txt -o silver-fleece.txt
 
 ls</code></pre>
 </div>
