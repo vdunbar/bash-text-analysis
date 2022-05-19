@@ -47,7 +47,7 @@ And then by word if we wanted to get still more granular...
 | 2 | kindly |
 | 2 | stopped |
 
-This kind of approach would work well for things like frequency calculations and extraction or an initial analysis to get familiar with the text as a data set.
+This kind of approach would work well for things like frequency calculations and extraction or an initial analysis to get familiar with the text as a data set. This kind of approach also allows the text as data to be moved around, sorted etc.
 
 ## Finding patterns
 

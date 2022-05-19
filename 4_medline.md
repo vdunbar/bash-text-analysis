@@ -2,17 +2,13 @@
 title: Medline
 ---
 
-## ALM @ NLM
+## Automated Language Processing
 
-**Automated Language Processing @ the National Library of Medicine (NLM)**
-
-Many examples of human language breaking patterns exist. One timely example that impacts our work as librarians is the MEDLINE 2022 Initiative. 
-
-**MEDLINE 2022 Initiative: Transition to Automated Indexing**
+Many examples of human language breaking patterns exist. One timely example that impacts our work as librarians is the MEDLINE 2022 Initiative: Transition to Automated Indexing.
 
 Medical Subject Heading (MeSH) indexing is the task of assigning relevant MeSH terms/controlled vocabulary based on a manual reading of scholarly publications by human indexers. The task is important for improving literature retrieval and for many other scientific investigations in biomedical research including complex evidence syntheses.  
 
-Because of its manual nature, the process of MeSH indexing has been both time-consuming and costly. It is estimated that new articles are not immediately indexed until 2 or 3 months after publication--a time frame that is not absolute--and that said process is quite costly--[approximately ten dollars per article](doi.org/10.1186/s13326-017-0123-3). 
+Because of its manual nature, the process of MeSH indexing has been both time-consuming and costly. It is estimated that new articles are not immediately indexed until 2 or 3 months after publication--a time frame that is not absolute--and that said process is quite costly--[approximately ten dollars per article](https://doi.org/10.1186/s13326-017-0123-3). 
 
 The National Library of Medicine launched the MEDLINE 2022 initiative in 2018 which is a five-year plan to ensure that "MEDLINE continues to evolve to meet the needs of users in an age of data-driven discovery.  A key goal of this initiative involved implementing a range of indexing methods to ensure the timely assignment of MeSH to MEDLINE citations." [1]
 
@@ -41,7 +37,7 @@ The MTI algorithm has been undergoing refinements in recent years as the NLM mov
 <div class = "note">
 **Note**
 
-The origin of the designation IM and NIM comes from the time when terms describing major points of that article were printed in Index Medicus. IM meant printed in Index Medicus and NIM meant not printed in Index Medicus. IM terms are the main point of the article, while NIM terms are secondary terms supporting the major points of the article. IMN concepts are designated by an asterisk--`*`.
+The origin of the designation IM and NIM comes from the time when terms describing major points of that article were printed in Index Medicus. IM meant printed in Index Medicus and NIM meant not printed in Index Medicus. IM terms are the main point of the article, while NIM terms are secondary terms supporting the major points of the article. IM concepts are designated by an asterisk--`*`.
 </div>
 
 The version of MTI used for current automated indexing is called MTIA, and it is being applied to citations from a variety of journals. Human curation of MTIA-indexed citations originally involved a scan of all citations indexed by MTIA but has been modified to focus curation on specific sets of citations (e.g., those involving genes and proteins) to scale curation and to ensure that indexed terms are correct and irrelevant terms are not indexed.
@@ -54,11 +50,11 @@ The move towards completely automated indexing has implications for our work as 
 
 The other issue is the ability to rely on complex search strategies using a combination of keywords and MeSH for systematic, scoping, rapid, and other reviews. The rigour by which these searches are constructed depend somewhat highly on appropriately applied indexing. 
 
-A few examples of misapplied subject headings:
+A few examples of misapplied subject headings include:
 
-* Papers in rehabilitation sciences  looking at anatomical calves indexed with “cattle”
-* White matter in the brain indexed with “residential characteristics for European ancestry”
-* Articles about medical residents indexed with the subject heading “long term care residents”
+* Papers in rehabilitation sciences looking at anatomical calves indexed with "cattle"
+* White matter in the brain indexed with "residential characteristics for European ancestry"
+* Articles about medical residents indexed with the subject heading "long term care residents"
 * The Randomized Controlled Trial publication type being misapplied. This study type in particular is important for systematic reviews of randomized controlled trials. 
 
 <br /><br />

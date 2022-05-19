@@ -11,9 +11,9 @@ knitr::read_chunk("./scripts/workshop_files.R")
 
 This workshop will briefly introduce:
 
-* core concepts in text analysis.
-* basic computational approaches to text analysis.
-* command line tools for basic text analysis.
+* Core concepts in text analysis.
+* Basic computational approaches to text analysis.
+* Command line tools for basic text analysis.
 
 ## Objectives
 

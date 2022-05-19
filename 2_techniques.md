@@ -41,11 +41,11 @@ producing
 bodies
 ```
 
-One may also specifically search for compound terms, otherwise known as `n-grams`, where `n` represents the number of words in the compound term. Frequencies of `n-grams` can also be searched for, where instead of specifying the terms to find, we get the relative frequency of clusters of terms. A frequency count of proper names in a document then might query it for `bi-grams`.
+In a related way, one may also specifically search for compound terms, commonly referred to as `n-grams`, where `n` represents the number of words in the compound term. Frequencies of `n-grams` can also be searched for, where instead of specifying the terms to find, we get the relative frequency of clusters of terms. A frequency count of proper names in a document then might query it for `bi-grams`.
 
 ## Concordance
 
-Whereas collocation is primarily about the positional relationship between words, and as a tool can be applied to a quantitative analysis of a text, concordance is much more rooted in context. And while concordance can help to identify collocation, the process of analyzing concordances is richer.
+Whereas collocation is primarily about the positional relationship between words, and as a tool can be applied to a quantitative analysis of a text, concordance is much more rooted in context. And while concordance can help to identify collocation, the process of analyzing concordances is richer still.
 
 A typical display for reading concordances would look something like one of the two following screen captures:
 
@@ -59,13 +59,13 @@ A typical display for reading concordances would look something like one of the 
 
 ## Extraction
 
-Extraction is the process of trying to pull out known entities from a text, whether that be keywords, named entities etc. Extraction is often used to build a dataset to be used in another application.
+Extraction is the process of trying to pull out known entities from a text, whether that be keywords, named entities etc. Extraction is often used to build a data set to be used in another application.
 
 ## Classification
 
-Classification is generally used to derive meaning from a text; common classification schemes include sentiment analysis, attempts to identify sarcasm, an emotional ranking of a given piece of text etc. Classification here relies on some aspect of the all the above--synonyms and homonyms, concordance and collocation, and extraction--to develop the a classification methodology whether that be more or less ambiguously articulated by a person and reliant on tools like inter-rater reliability to use effectively, or couched in an algorithm run by a computer application.
+Classification is generally used to derive meaning from a text; common classification schemes include sentiment analysis, attempts to identify sarcasm, an emotional ranking of a given piece of text etc. Classification here relies on some aspect of the all the above--synonyms and homonyms, concordance and collocation, and extraction. Classification schemes may be more or less ambiguously articulated by a person and reliant on tools like inter-rater reliability to use effectively, or couched in an algorithm run by a computer application. Generally, in a research context, classification schemes are accompanied by publications articulating how these were derived.
 
-Using sentiment analysis as an example, many dictionaries have been developped. Some simply list positive and negative words, such as the [Opinion Lexicon by Bing Lu](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon) and looks something like:
+Using sentiment analysis as an example, many dictionaries have been developed. Some simply list positive and negative words, such as the [Opinion Lexicon by Bing Lu](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon) and looks something like:
 
 | Positive | Negative |
 | :--- | :--- |

@@ -8,9 +8,9 @@ The following is heavily based on the tutorial authored by William J Turkel, Pro
 
 First things first, we need to launch our terminal app--on a Mac simply navigate to your applications launch Terminal, on a PC start to type `bash` into the start menu text prompt and you should see your Git Bash application pop up.
 
-Second we'll get ourselves set up with a place to work. For this we'll revisit the `cd`--change directory--and `mkdir`--makedirectory--command line tools to create a directory called `Silver-Fleece` on our desktop and place ourselves in that folder.
+Second we'll get ourselves set up with a place to work. For this we'll revisit the `cd`--change directory--and `mkdir`--make directory--command line tools to create a directory called `Silver-Fleece` on our desktop and place ourselves in that folder.
 
-```{r, engine = 'bash', count_lines}
+```bash
 cd ~/Desktop
 
 mkdir Silver-Fleece
