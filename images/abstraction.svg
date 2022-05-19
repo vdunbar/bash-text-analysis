@@ -25,9 +25,9 @@
      showgrid="false"
      inkscape:zoom="1.3416246"
      inkscape:cx="399.51563"
-     inkscape:cy="471.07067"
-     inkscape:window-width="2331"
-     inkscape:window-height="1508"
+     inkscape:cy="471.44335"
+     inkscape:window-width="1629"
+     inkscape:window-height="997"
      inkscape:window-x="51"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -40,7 +40,10 @@
      id="layer1">
     <g
        id="g3449"
-       transform="matrix(0.74276102,0,0,0.74276102,6.8248494,24.481861)">
+       transform="matrix(0.74276102,0,0,0.74276102,6.8248494,24.481861)"
+       inkscape:export-filename="/Users/vdunbar/Git/csc/bash-text-analysis/images/abstraction.png"
+       inkscape:export-xdpi="91.059998"
+       inkscape:export-ydpi="91.059998">
       <path
          id="rect846"
          style="fill:none;stroke:#000000;stroke-width:0.205397;stroke-miterlimit:4;stroke-dasharray:none"
@@ -69,7 +72,10 @@
     </g>
     <g
        id="g3868"
-       transform="matrix(0.6268968,0,0,0.6268968,4.1587521,28.439204)">
+       transform="matrix(0.6268968,0,0,0.6268968,4.1587521,28.439204)"
+       inkscape:export-filename="/Users/vdunbar/Git/csc/bash-text-analysis/images/abstraction.png"
+       inkscape:export-xdpi="91.059998"
+       inkscape:export-ydpi="91.059998">
       <g
          id="g1911"
          transform="matrix(0.39758996,0,0,0.39758996,65.290485,-14.006978)">
@@ -339,7 +345,10 @@
       </g>
     </g>
     <g
-       id="g3523">
+       id="g3523"
+       inkscape:export-filename="/Users/vdunbar/Git/csc/bash-text-analysis/images/abstraction.png"
+       inkscape:export-xdpi="91.059998"
+       inkscape:export-ydpi="91.059998">
       <g
          id="g3575"
          transform="matrix(0.63024001,0,0,0.63024001,17.606633,19.021709)">
@@ -1323,7 +1332,10 @@
     </g>
     <g
        id="g3369"
-       transform="translate(-9.8585015)">
+       transform="translate(-9.8585015)"
+       inkscape:export-filename="/Users/vdunbar/Git/csc/bash-text-analysis/images/abstraction.png"
+       inkscape:export-xdpi="91.059998"
+       inkscape:export-ydpi="91.059998">
       <g
          id="g3344"
          transform="translate(1.9721115,33.328685)">
@@ -1458,7 +1470,10 @@
     </g>
     <g
        id="g2783"
-       transform="translate(0.08129736,-11.112501)">
+       transform="translate(0.08129736,-11.112501)"
+       inkscape:export-filename="/Users/vdunbar/Git/csc/bash-text-analysis/images/abstraction.png"
+       inkscape:export-xdpi="91.059998"
+       inkscape:export-ydpi="91.059998">
       <path
          id="rect1154"
          style="fill:#ececec;stroke:#ececec;stroke-width:1.79613"
